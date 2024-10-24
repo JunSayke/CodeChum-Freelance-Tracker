@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Third Layout</title>
+		<style>
+			#wrapper {
+				display: grid;
+				grid-template-columns: repeat(3, auto);
+				grid-template-rows: repeat(2, auto);
+				grid-gap: 1.5rem 2rem;
+
+				height: 40rem;
+				width: 45rem;
+				margin: 10vh auto;
+				grid-template-areas:
+					"box1 box2 box3"
+					"box4 box4 box4"
+					"box5 box5 box5";
+			}
+			#wrapper div {
+				outline: 4px solid #395e89;
+				border-radius: 1px;
+			}
+			#wrapper > div:nth-child(1) {
+				grid-area: box1;
+			}
+			#wrapper > div:nth-child(2) {
+				grid-area: box2;
+			}
+			#wrapper > div:nth-child(3) {
+				grid-area: box3;
+			}
+			#wrapper > div:nth-child(4) {
+				grid-area: box4;
+			}
+			#wrapper > div:nth-child(5) {
+				grid-area: box5;
+				display: flex;
+			}
+			#wrapper > div:nth-child(5) {
+				grid-area: box5;
+				display: flex;
+				border: none;
+				outline: none;
+			}
+			#wrapper > div:nth-child(5) > div {
+				width: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div style="background-color: #4f81bd"></div>
+			<div style="background-color: #205867"></div>
+			<div style="background-color: #ffff00"></div>
+			<div style="background-color: #ff0000"></div>
+			<div>
+				<div style="background-color: #93b3d7"></div>
+				<div style="background-color: #fabf8e"></div>
+			</div>
+		</div>
+	</body>
+</html>

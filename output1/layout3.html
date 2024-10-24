@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Third Layout</title>
+		<style>
+			#wrapper {
+				display: grid;
+				grid-template-columns: auto auto;
+				grid-template-rows: auto auto 25%;
+				height: 40rem;
+				width: 45rem;
+				margin: 10vh auto;
+				grid-template-areas:
+					". box1"
+					"box2 ."
+					"box3 box3";
+			}
+			#wrapper > div {
+				border: 2px solid #395e89;
+				outline: 2px solid #395e89;
+				border-radius: 1px;
+			}
+			#wrapper > div:nth-child(2) {
+				grid-area: box1;
+			}
+			#wrapper > div:nth-child(3) {
+				grid-area: box2;
+			}
+			#wrapper > div:nth-child(5) {
+				grid-area: box3;
+			}
+			.empty {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				font-size: larger;
+				border: none !important;
+				outline: none !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="empty">EMPTY</div>
+			<div style="background-color: #4f81bd"></div>
+			<div style="background-color: #ffff00"></div>
+			<div class="empty">EMPTY</div>
+			<div style="background-color: #205867"></div>
+		</div>
+	</body>
+</html>

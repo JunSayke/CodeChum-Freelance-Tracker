@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Second Layout</title>
+		<style>
+			#wrapper {
+				display: flex;
+				flex-direction: column;
+				height: 40rem;
+				width: 35rem;
+				margin: 10vh auto;
+			}
+			#wrapper > div {
+				display: block;
+				outline: 4px solid #395e89;
+				border-radius: 1px;
+				flex-grow: 0.5;
+			}
+			#wrapper > div:last-child {
+				flex-grow: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div style="background-color: #ffff00"></div>
+			<div style="background-color: #4f81bd"></div>
+			<div style="background-color: #205867"></div>
+		</div>
+	</body>
+</html>
