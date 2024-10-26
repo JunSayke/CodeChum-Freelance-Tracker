@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="styles.css" />
+		<title>Layout 1</title>
+		<style>
+			#first .section-wrapper {
+				& .box:first-of-type {
+					grid-column: 1 / span 5;
+					grid-row: 1;
+					margin: 0 auto;
+					width: 70%;
+					height: fit-content;
+				}
+				& .box:last-of-type {
+					grid-column: 7 / span 5;
+					grid-row: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav
+				id="navid"
+				class="site-nav">
+				<img
+					src="imgs/logo.png"
+					alt="logo"
+					class="logo" />
+			</nav>
+		</header>
+		<main>
+			<section
+				id="first"
+				class="section">
+				<div class="section-wrapper border">
+					<div
+						class="box border"
+						style="color: var(--primary)">
+						<p class="text-helper">
+							Evolve your
+							<br />
+							Facebook live selling to a
+							<br />
+						</p>
+						<h1 class="heading">
+							Powerful
+							<br />
+							Shopping Experience
+						</h1>
+					</div>
+
+					<div class="section-image box border">
+						<img
+							src="imgs/first-section-image.png"
+							alt="first section image" />
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="footerid">
+			<button
+				class="button"
+				id="join-now">
+				Join Now
+			</button>
+			<a
+				href="#"
+				id="arrow-down">
+				<img src="imgs/arrow-down-icon.svg" />
+			</a>
+		</footer>
+	</body>
+</html>

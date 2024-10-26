@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="styles.css" />
+		<title>Layout 6</title>
+		<style>
+			#sixth .section-wrapper {
+				& .box:nth-of-type(1) {
+					grid-column: 1/12;
+					grid-row: 1;
+				}
+				& .box:nth-of-type(2) {
+					grid-column: 1 / span 5;
+					grid-row: 2;
+				}
+				& .box:nth-of-type(3) {
+					grid-column: 7 / span 5;
+					grid-row: 2;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav id="navid">
+				<img
+					src="imgs/logo.png"
+					alt="logo"
+					class="logo" />
+			</nav>
+		</header>
+		<main>
+			<section
+				id="sixth"
+				class="section"
+				style="background: url('imgs/particles.svg')">
+				<div class="section-wrapper border">
+					<div class="box border">
+						<h2 class="subheading">Take the first mover advantage!</h2>
+					</div>
+
+					<div class="section-image box border">
+						<img src="imgs/sixth-section-image.png" />
+					</div>
+
+					<div class="text-center box border">
+						<h4
+							class="text-title"
+							style="color: var(--primary)">
+							Sign-up Bonus
+						</h4>
+						<p class="text-body">
+							You will also get
+							<b style="color: var(--primary)">5x</b>
+							more aliveecoins for all your buyers, up to a limited time.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="footerid">
+			<button
+				class="button"
+				id="join-now">
+				Join Now
+			</button>
+			<a
+				href="#"
+				id="arrow-down">
+				<img src="imgs/arrow-down-icon.svg" />
+			</a>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="styles.css" />
+		<title>Layout 5</title>
+		<style>
+			#fifth .section-wrapper {
+				& .box:nth-of-type(1) {
+					grid-column: 1/12;
+					grid-row: 1;
+				}
+				& .box:nth-of-type(2) {
+					grid-column: 1 / span 5;
+					grid-row: 2;
+				}
+				& .box:nth-of-type(3) {
+					grid-column: 7 / span 5;
+					grid-row: 2;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav id="navid">
+				<img
+					src="imgs/logo.png"
+					alt="logo"
+					class="logo" />
+			</nav>
+		</header>
+		<main>
+			<section
+				id="fifth"
+				class="section">
+				<div class="section-wrapper box border">
+					<div class="box border">
+						<h2 class="subheading">
+							All functions to help you GROW your live selling business
+						</h2>
+					</div>
+
+					<div class="text-center box border">
+						<h4
+							class="text-title"
+							style="color: var(--primary)">
+							Your success = Our success. Period.
+						</h4>
+						<p class="text-body">
+							We never stop improving our features, that is our promise to our
+							sellers. We see you as a partner not just a subscriber. More
+							functions will be updated over time. Our team is made up of ex
+							successful tech startup founders
+						</p>
+					</div>
+					<div class="section-image box border">
+						<img src="imgs/fifth-section-image.png" />
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="footerid">
+			<button
+				class="button"
+				id="join-now">
+				Join Now
+			</button>
+			<a
+				href="#"
+				id="arrow-down">
+				<img src="imgs/arrow-down-icon.svg" />
+			</a>
+		</footer>
+	</body>
+</html>

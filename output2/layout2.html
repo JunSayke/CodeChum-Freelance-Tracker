@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="styles.css" />
+		<title>Layout 2</title>
+		<style>
+			#second .section-wrapper {
+				& .box:nth-of-type(1) {
+					grid-column: 1 / 12;
+					grid-row: 1;
+					height: fit-content;
+				}
+				& .box:nth-of-type(2) {
+					grid-column: 1 / span 5;
+					grid-row: 2;
+				}
+				& .box:nth-of-type(3) {
+					grid-column: 7 / span 5;
+					grid-row: 2;
+					height: fit-content;
+					& ul {
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						list-style-type: none;
+						gap: 10px;
+
+						padding: 0 20px 0 20px;
+						& li {
+							display: flex;
+							gap: 8px;
+							& img {
+								height: max-content;
+							}
+							& p {
+								color: #616161;
+								font-size: 0.75rem;
+								line-height: 1rem;
+							}
+						}
+					}
+				}
+				& .box:nth-child(4) {
+					grid-column: 1 / 12;
+					grid-row: 3;
+					margin: 0 auto;
+					height: fit-content;
+					width: 60%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav id="navid">
+				<img
+					src="imgs/logo.png"
+					alt="logo"
+					class="logo" />
+			</nav>
+		</header>
+		<main>
+			<section
+				id="second"
+				class="section">
+				<div class="section-wrapper">
+					<div class="box border">
+						<h2 class="subheading">
+							Transform problematic comments into powerful buttons
+						</h2>
+					</div>
+					<div class="section-image box border">
+						<img src="imgs/second-section-image.png" />
+					</div>
+					<div class="box border">
+						<ul>
+							<li>
+								<img src="imgs/check-mark-icon.svg" />
+								<p>
+									Seamless and familiar e-commerce shopping experience for your
+									buyers
+								</p>
+							</li>
+							<li>
+								<img src="imgs/check-mark-icon.svg" />
+								<p>No more worrying customers type wrong</p>
+							</li>
+							<li>
+								<img src="imgs/check-mark-icon.svg" />
+								<p>Move on to next product faster during live</p>
+							</li>
+							<li>
+								<img src="imgs/check-mark-icon.svg" />
+								<p>Focus 100% on selling product faster</p>
+							</li>
+						</ul>
+					</div>
+					<div class="text-center box border">
+						<p class="text-body">
+							Now your live shop can scale to new heights!
+							<br />
+							You can sell 3x-8x more products comparing
+							<br />
+							with any other systems out there
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="footerid">
+			<button
+				class="button"
+				id="join-now">
+				Join Now
+			</button>
+			<a
+				href="#"
+				id="arrow-down">
+				<img src="imgs/arrow-down-icon.svg" />
+			</a>
+		</footer>
+	</body>
+</html>
