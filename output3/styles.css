@@ -1,4 +1,5 @@
 /* BASE STYLES */
+/* IMPROVE CLASS REUSABILITY and LAYOUT FROM THE BOTTOM IS A LITTLE BIT COMPACT*/
 :root {
 	--primary: #5c65ff;
 }
@@ -238,7 +239,6 @@ input {
 
 .benefit-list .benefit {
 	display: flex;
-	max-width: ;
 	gap: 8px;
 }
 
