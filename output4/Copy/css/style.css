@@ -1,9 +1,4 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
+/* Fonts */
 @font-face {
 	font-family: "Glyphicons Halflings";
 	src: url("../fonts/glyphicons-halflings-regular.woff2") format("woff2");
@@ -22,6 +17,17 @@
 @font-face {
 	font-family: "Raleway";
 	src: url("../fonts/Raleway.ttf") format("truetype");
+}
+
+/* Base Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 8px;
 }
 
 body {
@@ -58,19 +64,17 @@ body {
 }
 
 .section-wrapper {
-	position: relative;
 	height: 100vh;
 	width: 100%;
 	padding-top: 100px;
 	overflow: hidden;
 }
 
-.first-section {
-	position: relative;
+/* First Section */
+#first-section {
 	height: 100vh;
 	width: 100%;
-	background: url("../images/red_blink2.png") center center;
-	background-size: cover;
+	background: url("../images/red_blink2.png") center/50% no-repeat;
 	z-index: 1;
 }
 
@@ -85,65 +89,117 @@ body {
 	z-index: 2;
 }
 
-.christmas-header h1 {
+.christmas-header .heading {
 	margin-bottom: 40px;
+	font-size: 2em;
+	font-weight: normal;
+	line-height: 0.875em;
 }
 
-.christmas-header h1 strong:nth-of-type(1) {
+.christmas-header .heading .text-helper {
 	font-size: 1.5em;
 }
 
-.christmas-header p {
-	line-height: 1.175em;
+.christmas-header .sub-heading {
+	font-size: 0.9em;
+	line-height: 1.5em;
 }
 
-.christmas-header p span:nth-of-type(1) {
-	font-size: 0.7em;
+.christmas-header .sub-heading .text-helper {
+	font-size: 2.275em;
 }
 
-.christmas-header p span:nth-of-type(2) {
-	font-size: 1.55em;
-}
-
-.christmas-header p img:last-of-type {
-	margin-top: 15px;
-}
-
-img.divider {
+.divider {
+	width: 60%;
 	display: block;
 	margin: 0 auto;
-	width: 80%;
 }
 
-.parallax {
+.christmas-header .divider:first-of-type {
+	margin-bottom: 10px;
+}
+
+.christmas-header .divider:last-of-type {
+	margin-top: 0px;
+}
+
+.parallax-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.parallax-item {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 0;
+	will-change: transform;
 }
 
 .snow-pattern {
-	background: url("../images/snow_pattern.png") repeat-y center;
+	background-size: cover;
+	background-position: center;
 }
 
-.snow-pattern2 {
-	background: url("../images/snow_pattern2.png") repeat-y center;
+.snow-pattern.snow-balls {
+	background-image: url("../images/snow_pattern.png");
+}
+
+.snow-pattern.snow-flakes {
+	background-image: url("../images/snow_pattern2.png");
 }
 
 .trees-pattern {
-	background: url("../images/trees_pattern_01.png") repeat-x bottom;
+	background-image: url("../images/trees_pattern_01.png");
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-size: 150rem;
+}
+
+.reindeer-pattern {
+	background-size: 10rem;
+}
+
+.reindeer-pattern.reindeer-left {
+	background-image: url("../images/pic_01.png");
+	background-repeat: no-repeat;
+	background-position: 15% center;
+}
+
+.reindeer-pattern.reindeer-right {
+	background-image: url("../images/pic_02.png");
+	background-repeat: no-repeat;
+	background-position: 85% center;
 }
 
 /* Mobile View */
 @media (min-width: 769px) {
+	html {
+		font-size: 10px;
+	}
+	.divider {
+		width: 70%;
+	}
 }
 
 /* Laptop View */
 @media (min-width: 1025px) {
+	html {
+		font-size: 12px;
+	}
+	.divider {
+		width: 80%;
+	}
 }
 
 /* Desktop View */
 @media (min-width: 1201px) {
+	html {
+		font-size: 14px;
+	}
+	.divider {
+		width: 90%;
+	}
 }
