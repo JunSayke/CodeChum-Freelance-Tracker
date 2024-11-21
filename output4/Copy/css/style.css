@@ -19,22 +19,6 @@
 	src: url("../fonts/Raleway.ttf") format("truetype");
 }
 
-/* Base Styles */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-html {
-	font-size: 8px;
-}
-
-body {
-	background-color: #9d1e12;
-	overflow-x: hidden;
-}
-
 .font-chunk {
 	font-family: "Chunk", sans-serif;
 }
@@ -51,6 +35,36 @@ body {
 	font-family: "Glyphicons Halflings", sans-serif;
 }
 
+.font-times {
+	font-family: Times, serif;
+}
+
+/* Base Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+html {
+	font-size: 8px;
+}
+
+body {
+	overflow-x: hidden;
+}
+
 .text-capitalize {
 	text-transform: capitalize;
 }
@@ -63,124 +77,307 @@ body {
 	background-color: #9d1e12;
 }
 
+.bg-snow {
+	background-color: #eaf8f9;
+}
+
 .section-wrapper {
+	position: relative;
 	height: 100vh;
 	width: 100%;
 	padding-top: 100px;
 	overflow: hidden;
 }
 
+.section-footer {
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	background-image: url("../images/section_footer.png");
+	background-size: 100rem;
+	background-position: top;
+	background-repeat: repeat-x;
+	z-index: 1;
+}
+
+/* Parallax */
+.parallax-item {
+	position: absolute;
+	z-index: 0;
+}
+
+.snow-balls-bg,
+.snow-flakes-bg,
+.trees-bg {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.snow-balls-bg,
+.snow-flakes-bg {
+	background-size: cover;
+	background-position: center;
+}
+
+.snow-balls-bg {
+	background-image: url("../images/snow_pattern.png");
+}
+
+.snow-flakes-bg {
+	background-image: url("../images/snow_pattern2.png");
+}
+
+.trees-bg {
+	background-image: url("../images/trees_pattern_01.png");
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-size: 100rem;
+}
+
+.reindeer-left-img,
+.reindeer-right-img {
+	width: 8rem;
+	transform: translateY(-50%);
+}
+
+.reindeer-left-img {
+	left: -12rem;
+}
+
+.reindeer-right-img {
+	right: -12rem;
+}
+
+#reindeers-container {
+	position: relative;
+	margin-bottom: 20px;
+}
+
 /* First Section */
 #first-section {
 	height: 100vh;
 	width: 100%;
-	background: url("../images/red_blink2.png") center/50% no-repeat;
 	z-index: 1;
 }
 
-.christmas-header {
+#first-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: fit-content;
+	background: url("../images/red_blink2.png") no-repeat 50% 4rem / contain;
+}
+
+#cherry-icon {
+	width: 5rem;
+	height: 3.275rem;
+}
+
+#christmas-header {
 	text-align: center;
-	font-size: 4em;
+	font-size: 3.675em;
 	line-height: 1.7em;
 	color: #f5f5f5;
 	width: fit-content;
-	margin: 0 auto;
-	position: relative;
-	z-index: 2;
 }
 
-.christmas-header .heading {
-	margin-bottom: 40px;
+#christmas-header .title {
 	font-size: 2em;
 	font-weight: normal;
 	line-height: 0.875em;
 }
 
-.christmas-header .heading .text-helper {
+#christmas-header .title .text-helper {
 	font-size: 1.5em;
 }
 
-.christmas-header .sub-heading {
+#christmas-header .sub-title {
 	font-size: 0.9em;
 	line-height: 1.5em;
 }
 
-.christmas-header .sub-heading .text-helper {
+#christmas-header .sub-title .text-helper {
 	font-size: 2.275em;
 }
 
 .divider {
 	width: 60%;
-	display: block;
-	margin: 0 auto;
 }
 
-.christmas-header .divider:first-of-type {
+.divider-green {
+	width: 100%;
+}
+
+#christmas-header .divider:first-of-type {
 	margin-bottom: 10px;
 }
 
-.christmas-header .divider:last-of-type {
+#christmas-header .divider:last-of-type {
 	margin-top: 0px;
 }
 
-.parallax-container {
-	position: relative;
-	overflow: hidden;
+.btn {
+	position: relative; /* Ensures the button acts as a positioning container */
+	display: inline-flex; /* Aligns content inside the button */
+	justify-content: center; /* Centers text horizontally */
+	align-items: center; /* Centers text vertically */
+	overflow: hidden; /* Prevents the image from overflowing */
+	padding: 20px; /* Adds space around the text */
+	color: white;
+	border-radius: 5px;
+	transition: 200ms; /* Smooth transition for scaling and brightness */
+	height: 4.725rem;
+	font-size: 2rem;
+	font-weight: bold;
 }
 
-.parallax-item {
-	position: absolute;
+.btn .btn-text {
+	position: relative; /* Places the text in front of the image */
+	z-index: 2; /* Ensures the text is in front of the image */
+}
+
+.btn .btn-bg {
+	position: absolute; /* Places the image behind the text */
 	top: 0;
 	left: 0;
+	width: 100%; /* Stretches the image to fill the button */
+	height: 100%; /* Stretches the image to fill the button */
+	z-index: 1; /* Ensures the image is behind the text */
+}
+
+.btn:hover {
+	filter: brightness(0.9); /* Darken the image */
+	scale: 1.05; /* Increase the size of the button */
+}
+
+#learn-more-btn {
+	font-weight: bold;
+	padding: 10px 50px; /* Modifying padding instead of the width due to its neigbours reindeer positioning */
+}
+
+/* Second Section */
+.heading {
+	text-align: center;
+	font-size: 4rem;
+	padding: 1rem 10%;
+	color: #333333;
+}
+
+.heading .title {
+	font-weight: normal;
+}
+
+.heading .text-helper {
+	font-size: 0.5em;
+}
+
+#second-section.section-wrapper {
+	height: fit-content;
+	padding-bottom: 100px;
+}
+
+.product-name,
+.heading .text-helper {
+	color: #555555;
+	font-weight: 600;
+}
+
+/* Product List */
+#product-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	column-gap: 5rem;
+	row-gap: 10rem;
+	padding: 2rem;
+}
+
+.product-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* Ensure content is spaced evenly */
+	align-items: center;
+	text-align: center;
+	height: fit-content;
+	font-size: 0.8rem;
+	height: 100%; /* Ensure items take full height */
+}
+
+.thumbnail-container:hover .product-background {
+	background-image: url("../images/product_background_02.png"); /* Change to the hover background image */
+}
+
+.thumbnail-container:hover .product-thumbnail {
+	transform: scale(1.1); /* Scale the product thumbnail */
+}
+
+.product-background {
+	background: url("../images/product_background_01.png") no-repeat center /
+		contain;
+	transition: 200ms;
+}
+
+.thumbnail-container {
+	display: grid;
+	place-items: center; /* Centers content horizontally and vertically */
+	width: 100%;
+	height: 100%; /* Set a fixed height for the thumbnail container */
+	margin-bottom: 1rem; /* Add margin to separate from the product name */
+}
+
+.product-background,
+.product-thumbnail {
+	grid-row: 1;
+	grid-column: 1;
 	width: 100%;
 	height: 100%;
-	z-index: 0;
-	will-change: transform;
 }
 
-.snow-pattern {
-	background-size: cover;
-	background-position: center;
+.product-name {
+	font-size: 2em;
+	margin: 20px 0;
 }
 
-.snow-pattern.snow-balls {
-	background-image: url("../images/snow_pattern.png");
+.product-thumbnail {
+	transition: 200ms; /* Smooth transition for scaling */
 }
 
-.snow-pattern.snow-flakes {
-	background-image: url("../images/snow_pattern2.png");
+.product-item .price-tag {
+	font-size: 2em;
+	color: #333333;
 }
 
-.trees-pattern {
-	background-image: url("../images/trees_pattern_01.png");
-	background-position: bottom;
-	background-repeat: repeat-x;
-	background-size: 150rem;
+.buy-button {
+	width: 50%; /* Adjusts button width */
 }
 
-.reindeer-pattern {
-	background-size: 10rem;
-}
+/* Mobile View 401px */
 
-.reindeer-pattern.reindeer-left {
-	background-image: url("../images/pic_01.png");
-	background-repeat: no-repeat;
-	background-position: 15% center;
-}
-
-.reindeer-pattern.reindeer-right {
-	background-image: url("../images/pic_02.png");
-	background-repeat: no-repeat;
-	background-position: 85% center;
-}
-
-/* Mobile View */
+/* Tablet View */
 @media (min-width: 769px) {
 	html {
 		font-size: 10px;
 	}
 	.divider {
 		width: 70%;
+	}
+	.divider-green {
+		width: 70%;
+	}
+	#product-list {
+		grid-template-columns: 1fr 1fr;
+	}
+	.heading {
+		font-size: 3rem;
+	}
+	.product-item {
+		font-size: 0.6rem;
 	}
 }
 
@@ -192,6 +389,18 @@ body {
 	.divider {
 		width: 80%;
 	}
+	.divider-green {
+		width: 50%;
+	}
+	#product-list {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.heading {
+		font-size: 2rem;
+	}
+	.product-item {
+		font-size: 0.4rem;
+	}
 }
 
 /* Desktop View */
@@ -199,7 +408,24 @@ body {
 	html {
 		font-size: 14px;
 	}
+
 	.divider {
 		width: 90%;
+	}
+
+	.divider-green {
+		width: 30%;
+	}
+
+	.thumbnail-container {
+		width: 70%;
+	}
+
+	.product-name {
+		font-size: 1rem;
+	}
+
+	.product-thumbnail {
+		width: 80%;
 	}
 }
