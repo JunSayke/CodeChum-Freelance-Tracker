@@ -9,85 +9,91 @@
 		<link
 			rel="stylesheet"
 			href="css/style.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	</head>
 	<body>
-		<!-- <nav>
-			<a
-				class="anchor-tag"
-				id="first-a"
-				href="#first">
-				<span class="anchor-tag-text">Home</span>
-				<img
-					src="./images/menu_item_normal.png"
-					alt="menu-item" />
-			</a>
-			<a
-				class="anchor-tag"
-				id="second-a"
-				href="#second">
-				<span class="anchor-tag-text">Our Offer</span>
-				<img
-					src="./images/menu_item_normal.png"
-					alt="menu-item" />
-			</a>
-			<a
-				class="anchor-tag"
-				id="third-a"
-				href="#third">
-				<span class="anchor-tag-text">About Offer</span>
-				<img
-					src="./images/menu_item_normal.png"
-					alt="menu-item" />
-			</a>
-			<a
-				class="anchor-tag"
-				id="fourth-a"
-				href="#fourth">
-				<span class="anchor-tag-text">About Product #1</span>
-				<img
-					src="./images/menu_item_normal.png"
-					alt="menu-item" />
-			</a>
-			<a
-				class="anchor-tag"
-				id="fifth-a"
-				href="#fifth">
-				<span class="anchor-tag-text">About Product #2</span>
-				<img
-					src="./images/menu_item_normal.png"
-					alt="menu-item" />
-			</a>
-			<a
-				class="anchor-tag"
-				id="sixth-a"
-				href="#sixth">
-				<span class="anchor-tag-text">About Product #3</span>
-				<img
-					src="./images/menu_item_normal.png"
-					alt="menu-item" />
-			</a>
-			<a
-				class="anchor-tag"
-				id="seventh-a"
-				href="#seventh">
-				<span class="anchor-tag-text">Subscribe</span>
-				<img
-					src="./images/menu_item_normal.png"
-					alt="menu-item" />
-			</a>
-			<a
-				class="anchor-tag"
-				id="eighth-a"
-				href="#eighth">
-				<span class="anchor-tag-text">Interested?</span>
-				<img
-					src="./images/menu_item_normal.png"
-					alt="menu-item" />
-			</a>
-		</nav> -->
+		<nav id="main-nav">
+			<ul>
+				<li>
+					<span></span>
+					<a
+						href="#home"
+						class="text-uppercase">
+						HOME
+					</a>
+				</li>
+				<li>
+					<span></span>
+					<a
+						href="#hot-offer"
+						class="text-uppercase">
+						HOT OFFER
+					</a>
+				</li>
+				<li>
+					<span></span>
+					<a
+						href="#about-offer"
+						class="text-uppercase">
+						About Offer
+					</a>
+				</li>
+				<li>
+					<span></span>
+					<a
+						href="#about-product-1"
+						class="text-uppercase">
+						Product #1
+					</a>
+				</li>
+				<li>
+					<span></span>
+					<a
+						href="#about-product-2"
+						class="text-uppercase">
+						Product #2
+					</a>
+				</li>
+				<li>
+					<span></span>
+					<a
+						href="#about-product-3"
+						class="text-uppercase">
+						Product #3
+					</a>
+				</li>
+				<li>
+					<span></span>
+					<a
+						href="#subscribe"
+						class="text-uppercase">
+						Subscribe
+					</a>
+				</li>
+				<li>
+					<span></span>
+					<a
+						href="#contacts"
+						class="text-uppercase">
+						Contacts
+					</a>
+				</li>
+			</ul>
+		</nav>
 		<main>
 			<section
-				id="first-section"
+				id="home"
 				class="section-wrapper bg-cherry">
 				<div
 					class="parallax-item snow-balls-bg"
@@ -98,7 +104,9 @@
 				<div
 					class="parallax-item trees-bg"
 					data-parallax="trees"></div>
-				<div id="first-container">
+				<div
+					id="home-container"
+					class="inner-container">
 					<header id="christmas-header">
 						<h1 class="title text-capitalize font-pacifico">
 							Christmas
@@ -129,12 +137,8 @@
 						<button
 							id="learn-more-btn"
 							type="button"
-							class="text-uppercase font-times btn">
-							<img
-								class="btn-bg"
-								src="images/cta_button_normal.png"
-								alt="button-background" />
-							<span class="btn-text">Learn More</span>
+							class="text-uppercase font-times">
+							Learn More
 						</button>
 						<img
 							class="parallax-item reindeer-right-img"
@@ -150,7 +154,7 @@
 				</div>
 			</section>
 			<section
-				id="second-section"
+				id="hot-offer"
 				class="section-wrapper bg-snow">
 				<div class="heading font-chunk">
 					<h5 class="title text-uppercase">Our Hot Offer</h5>
@@ -180,12 +184,8 @@
 						</p>
 						<button
 							type="button"
-							class="text-uppercase buy-button btn">
-							<img
-								class="btn-bg"
-								src="images/buy_button_normal.png"
-								alt="buy-button-background" />
-							<span class="btn-text font-times">Buy Now</span>
+							class="text-uppercase buy-button">
+							Buy Now
 						</button>
 					</li>
 					<li class="product-item">
@@ -203,12 +203,8 @@
 						</p>
 						<button
 							type="button"
-							class="text-uppercase buy-button btn">
-							<img
-								class="btn-bg"
-								src="images/buy_button_normal.png"
-								alt="buy-button-background" />
-							<span class="btn-text font-times">Buy Now</span>
+							class="text-uppercase buy-button">
+							Buy Now
 						</button>
 					</li>
 					<li class="product-item">
@@ -226,19 +222,15 @@
 						</p>
 						<button
 							type="button"
-							class="text-uppercase buy-button btn">
-							<img
-								class="btn-bg"
-								src="images/buy_button_normal.png"
-								alt="buy-button-background" />
-							<span class="btn-text font-times">Buy Now</span>
+							class="text-uppercase buy-button">
+							Buy Now
 						</button>
 					</li>
 				</ul>
 			</section>
 			<div class="section-footer"></div>
 			<section
-				id="third-section"
+				id="about-offer"
 				class="section-wrapper bg-cherry">
 				<div
 					class="parallax-item snow-balls-bg"
@@ -249,14 +241,79 @@
 				<div
 					class="parallax-item trees-bg"
 					data-parallax="trees"></div>
+				<div
+					id="promo-container"
+					class="inner-container">
+					<div class="heading font-chunk">
+						<h5 class="title text-uppercase">Promo Video</h5>
+						<img
+							src="images/divider_white.png"
+							alt="line-divider"
+							class="divider" />
+						<p class="text-helper font-raleway">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
+							nonummy
+						</p>
+					</div>
+					<iframe
+						id="promo-video"
+						src="https://www.youtube.com/embed/oVVdNWX_5Go"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</section>
+			<section
+				id="about-product-1"
+				class="section-wrapper bg-snow">
+				<div class="heading font-chunk">
+					<h5 class="title text-uppercase">About Product #1</h5>
+					<img
+						src="images/divider_green_s.png"
+						alt="line-divider"
+						class="divider-green" />
+					<p class="text-helper font-raleway">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit
+					</p>
+				</div>
+				<div class="about-product">
+					<div class="carousel">
+						<img
+							class="carousel-img"
+							src="./images/product_01_preview_01.jpg"
+							alt="product-01-preview-01" />
+						<img
+							class="carousel-img"
+							src="./images/product_01_preview_02.jpg"
+							alt="product-01-preview-02" />
+						<img
+							class="carousel-img"
+							src="./images/product_01_preview_03.jpg"
+							alt="product-01-preview-03" />
+					</div>
+					<div class="product-details">
+						<p class="description font-raleway">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
+							venenatis libero. Donec molestie, velit ut vehicula laoreet, augue
+							sapien sollicitudin felis, a scelerisque lacus turpis a erat. Sed
+							mauris metus, fermentum sed nibh a, fringilla suscipit odio. Cras
+							egestas odio vel pulvinar ultrices. Suspendisse euismod dolor at
+							erat maximus tincidunt
+						</p>
+						<div class="pricing-container">
+							<p class="product-price font-raleway">$99.50</p>
+							<button
+								type="button"
+								class="text-uppercase buy-button">
+								Buy Now
+							</button>
+						</div>
+					</div>
+				</div>
 			</section>
 			<div class="section-footer"></div>
 			<section
-				id="fourth-section"
-				class="section-wrapper bg-snow"></section>
-			<div class="section-footer"></div>
-			<section
-				id="fifth-section"
+				id="about-product-2"
 				class="section-wrapper bg-cherry">
 				<div
 					class="parallax-item snow-balls-bg"
@@ -267,13 +324,102 @@
 				<div
 					class="parallax-item trees-bg"
 					data-parallax="trees"></div>
+				<div class="heading font-chunk">
+					<h5 class="title text-uppercase">About Product #2</h5>
+					<img
+						src="images/divider_white_s.png"
+						alt="line-divider"
+						class="divider" />
+					<p class="text-helper font-raleway">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit
+					</p>
+				</div>
+				<div class="about-product">
+					<div class="carousel">
+						<img
+							class="carousel-img"
+							src="./images/product_01_preview_01.jpg"
+							alt="product-01-preview-01" />
+						<img
+							class="carousel-img"
+							src="./images/product_01_preview_02.jpg"
+							alt="product-01-preview-02" />
+						<img
+							class="carousel-img"
+							src="./images/product_01_preview_03.jpg"
+							alt="product-01-preview-03" />
+					</div>
+					<div class="product-details">
+						<p class="description font-raleway">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
+							venenatis libero. Donec molestie, velit ut vehicula laoreet, augue
+							sapien sollicitudin felis, a scelerisque lacus turpis a erat. Sed
+							mauris metus, fermentum sed nibh a, fringilla suscipit odio. Cras
+							egestas odio vel pulvinar ultrices. Suspendisse euismod dolor at
+							erat maximus tincidunt
+						</p>
+						<div class="pricing-container">
+							<p class="product-price font-raleway">$99.50</p>
+							<button
+								type="button"
+								class="text-uppercase buy-button">
+								Buy Now
+							</button>
+						</div>
+					</div>
+				</div>
 			</section>
 			<section
-				id="sixth-section"
-				class="section-wrapper bg-snow"></section>
+				id="about-product-3"
+				class="section-wrapper bg-snow">
+				<div class="heading font-chunk">
+					<h5 class="title text-uppercase">About Product #3</h5>
+					<img
+						src="images/divider_green_s.png"
+						alt="line-divider"
+						class="divider-green" />
+					<p class="text-helper font-raleway">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit
+					</p>
+				</div>
+				<div class="about-product">
+					<div class="carousel">
+						<img
+							class="carousel-img"
+							src="./images/product_01_preview_01.jpg"
+							alt="product-01-preview-01" />
+						<img
+							class="carousel-img"
+							src="./images/product_01_preview_02.jpg"
+							alt="product-01-preview-02" />
+						<img
+							class="carousel-img"
+							src="./images/product_01_preview_03.jpg"
+							alt="product-01-preview-03" />
+					</div>
+					<div class="product-details">
+						<p class="description font-raleway">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
+							venenatis libero. Donec molestie, velit ut vehicula laoreet, augue
+							sapien sollicitudin felis, a scelerisque lacus turpis a erat. Sed
+							mauris metus, fermentum sed nibh a, fringilla suscipit odio. Cras
+							egestas odio vel pulvinar ultrices. Suspendisse euismod dolor at
+							erat maximus tincidunt
+						</p>
+						<div class="pricing-container">
+							<p class="product-price font-raleway">$99.50</p>
+							<button
+								type="button"
+								class="text-uppercase buy-button">
+								Buy Now
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
 			<div class="section-footer"></div>
 			<section
-				id="seventh-section"
+				id="subscribe"
 				class="section-wrapper bg-cherry">
 				<div
 					class="parallax-item snow-balls-bg"
@@ -284,10 +430,120 @@
 				<div
 					class="parallax-item trees-bg"
 					data-parallax="trees"></div>
+				<div
+					id="subscription-container"
+					class="inner-container">
+					<div class="heading font-chunk">
+						<h5 class="title text-uppercase">Want more? Subscribe!</h5>
+						<img
+							src="images/divider_white.png"
+							alt="line-divider"
+							class="divider" />
+						<p class="text-helper font-raleway">
+							And get latest amazing offer first
+						</p>
+					</div>
+					<form id="subscription-form">
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Enter Name" />
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Enter Email" />
+						<button
+							type="submit"
+							id="subscription-btn">
+							Submit
+						</button>
+					</form>
+				</div>
 			</section>
 			<section
-				id="eighth-section"
-				class="section-wrapper bg-snow"></section>
+				id="contacts"
+				class="section-wrapper bg-snow">
+				<div class="heading font-chunk">
+					<h5 class="title text-uppercase">Are you interested?</h5>
+					<img
+						src="images/divider_green_s.png"
+						alt="line-divider"
+						class="divider-green" />
+					<p class="text-helper font-raleway">Get in touch with us</p>
+				</div>
+				<div id="contact-container">
+					<div class="contact-item">
+						<div class="mail-icon"></div>
+						<p class="contact-detail font-raleway">
+							Sales: sales@supersale.com
+							<br />
+							Support: support@supersale.com
+						</p>
+					</div>
+					<div class="contact-item">
+						<div class="call-icon"></div>
+						<p class="contact-detail font-raleway">
+							Sales: +1 123 456 7890
+							<br />
+							Support: +1 123 456 9578
+						</p>
+					</div>
+					<div class="contact-item">
+						<div class="address-icon"></div>
+						<p class="contact-detail font-raleway">
+							Office: Unit C2, St.Vincent's Trading Est.
+							<br />
+							Feeder Road, London, UK
+						</p>
+					</div>
+					<ul id="social-medias">
+						<li>
+							<a
+								class="facebook"
+								href="https://www.facebook.com"></a>
+						</li>
+						<li>
+							<a
+								class="twitter"
+								href="https://www.twitter.com"></a>
+						</li>
+						<li>
+							<a
+								class="gplus"
+								href="https://www.google.com"></a>
+						</li>
+						<li>
+							<a
+								class="instagram"
+								href="https://www.instagram.com"></a>
+						</li>
+						<li>
+							<a
+								class="pinterest"
+								href="https://www.pinterest.com"></a>
+						</li>
+						<li>
+							<a
+								class="tumblr"
+								href="https://www.tumblr.com/"></a>
+						</li>
+						<li>
+							<a
+								class="vimeo"
+								href="https://www.vimeo.com"></a>
+						</li>
+					</ul>
+					<p
+						id="copyright"
+						class="font-raleway">
+						© XMuse - Christmas Sale / Promo Landing Template by Vinyljunkie
+						<br />
+						All rights reserved. You can buy this template.
+					</p>
+				</div>
+			</section>
 		</main>
 
 		<script src="js/script.js"></script>

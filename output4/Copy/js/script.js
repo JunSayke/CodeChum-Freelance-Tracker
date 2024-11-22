@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 	// Parallax speed rate
+	// The higher the value, the faster the element will move
 	const parallaxSpeed = {
 		snowBalls: 2,
 		snowFlakes: 3,
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		// Select all elements with data-parallax attribute
 		const parallaxElements = document.querySelectorAll("[data-parallax]")
 
+		// Update position for each element
 		parallaxElements.forEach((element) => {
 			const parallaxType = element.dataset.parallax
 
@@ -58,4 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener("scroll", onScroll)
 	// Initial call to set positions on load
 	updateParallax()
+
+	// Initialize Slick carousel from slick js
+	$(".carousel").slick({
+		autoplay: true,
+		autoplaySpeed: 2000,
+		dots: true,
+		infinite: true,
+		slidesToShow: 1,
+	})
 })
