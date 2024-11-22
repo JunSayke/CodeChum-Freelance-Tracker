@@ -43,6 +43,7 @@
 :root {
 	--bg-color-christmas-red: #ad0101;
 	--bg-color-snow: #eaf8f9;
+	--bg-color-green: #97d253;
 	--color-white: #eaf8f9;
 	--color-dark: #353535;
 
@@ -123,13 +124,18 @@ button:hover {
 	z-index: 1;
 }
 
-.section-wrapper:nth-of-type(even) .heading,
-.section-wrapper:nth-of-type(even) .product-details {
+/* Alternate heading colors */
+#hot-offer,
+#about-product-1,
+#about-product-3,
+#contacts {
 	color: var(--color-dark);
 }
 
-.section-wrapper:nth-of-type(odd) .heading,
-.section-wrapper:nth-of-type(odd) .product-details {
+#home,
+#about-offer,
+#about-product-2,
+#subscribe {
 	color: var(--color-white);
 }
 
@@ -142,22 +148,26 @@ button:hover {
 }
 
 .inner-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 	position: relative;
 	z-index: 10;
 }
 
 .divider {
-	width: 60%;
+	width: 30rem;
 }
 
 .divider-green {
-	width: 100%;
+	width: 40rem;
 }
 
 .heading {
 	text-align: center;
 	font-size: 4rem;
-	padding: 1rem 10%;
 }
 
 .title {
@@ -430,14 +440,6 @@ body {
 }
 
 /* Third Section */
-#promo-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
 #promo-video {
 	width: 90%;
 	height: 60rem;
@@ -675,12 +677,6 @@ body {
 	html {
 		font-size: 10px;
 	}
-	.divider {
-		width: 70%;
-	}
-	.divider-green {
-		width: 70%;
-	}
 	#product-list {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -699,12 +695,6 @@ body {
 @media (min-width: 1025px) {
 	html {
 		font-size: 12px;
-	}
-	.divider {
-		width: 80%;
-	}
-	.divider-green {
-		width: 50%;
 	}
 	#product-list {
 		grid-template-columns: 1fr 1fr 1fr;
@@ -746,14 +736,6 @@ body {
 @media (min-width: 1201px) {
 	html {
 		font-size: 14px;
-	}
-
-	.divider {
-		width: 90%;
-	}
-
-	.divider-green {
-		width: 30%;
 	}
 
 	.thumbnail-container {
